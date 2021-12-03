@@ -33,15 +33,11 @@ const config: Configuration = {
       },
       {
         test: /\.(s(a|c)ss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource'
-      },
-      {
-        test: /\.(svg)$/i,
-        type: 'asset/inline'
       }
     ]
   },
@@ -59,7 +55,9 @@ const config: Configuration = {
       extensions: ['js', 'jsx', 'ts', 'tsx']
     }),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css'
+    })
   ]
 };
 

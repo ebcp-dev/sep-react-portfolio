@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 
 import './Footer.scss';
 
+import facebookLogo from '../../../assets/images/facebook.svg';
+import linkedinLogo from '../../../assets/images/linkedin.svg';
+import pinterestLogo from '../../../assets/images/pinterest.svg';
+import emailLogo from '../../../assets/images/email.svg';
+
 const Footer = () => {
   return (
     <div className="footer">
@@ -12,10 +17,7 @@ const Footer = () => {
             <div className="col-sm-1 col-md-1 col-sm-offset-4 col-md-offset-4">
               <div className="facebook">
                 <Link to="#">
-                  <img
-                    className="img-responsive"
-                    src="../../../assets/images/facebook.svg"
-                  />
+                  <img className="img-responsive" src={facebookLogo} />
                 </Link>
               </div>
             </div>
@@ -23,10 +25,7 @@ const Footer = () => {
             <div className="col-sm-1 col-md-1">
               <div className="linkedin">
                 <Link to="#">
-                  <img
-                    className="img-responsive"
-                    src="../../../assets/images/linkedin.svg"
-                  />
+                  <img className="img-responsive" src={linkedinLogo} />
                 </Link>
               </div>
             </div>
@@ -34,10 +33,7 @@ const Footer = () => {
             <div className="col-sm-1 col-md-1">
               <div className="pinterest">
                 <Link to="#">
-                  <img
-                    className="img-responsive"
-                    src="../../../assets/images/pinterest.svg"
-                  />
+                  <img className="img-responsive" src={pinterestLogo} />
                 </Link>
               </div>
             </div>
@@ -45,10 +41,7 @@ const Footer = () => {
             <div className="col-sm-1 col-md-1">
               <div className="email-icon">
                 <Link to="#">
-                  <img
-                    className="img-responsive"
-                    src="../../../assets/images/email.svg"
-                  />
+                  <img className="img-responsive" src={emailLogo} />
                 </Link>
               </div>
             </div>

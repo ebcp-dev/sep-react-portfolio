@@ -7,7 +7,8 @@ import ESLintPlugin from 'eslint-webpack-plugin';
 const config: Configuration = {
   mode: 'development',
   output: {
-    publicPath: 'auto'
+    publicPath: './build',
+    filename: 'main.js'
   },
   entry: './src/index.tsx',
   module: {
@@ -31,7 +32,7 @@ const config: Configuration = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource'
       }
     ]

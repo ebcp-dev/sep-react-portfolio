@@ -6,6 +6,11 @@ import Contact from '../Contact/Contact';
 
 import './Home.scss';
 
+import developerDesign from '../../assets/images/developerdesign.svg';
+import responsiveDesign from '../../assets/images/responsivedesign.svg';
+import innovativeSolutions from '../../assets/images/innovativesolutions.svg';
+import passionSvg from '../../assets/images/passion.svg';
+
 const Home = () => {
   return (
     <>
@@ -45,7 +50,7 @@ const Home = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="about-header">
-                <h1>About Me</h1>
+                <h1>About Me Test</h1>
               </div>
             </div>
           </div>
@@ -118,10 +123,7 @@ const Home = () => {
             <div className="development-summary">
               <div className="col-sm-1 col-md-1">
                 <div className="development-img">
-                  <img
-                    className="img-responsive"
-                    src="../../assets/images/developerdesign.svg"
-                  />
+                  <img className="img-responsive" src={developerDesign} />
                 </div>
               </div>
 
@@ -140,10 +142,7 @@ const Home = () => {
             <div className="responsive-summary">
               <div className="col-sm-1 col-md-1 col-sm-offset-2 col-md-offset-2">
                 <div className="responsive-img">
-                  <img
-                    className="img-responsive"
-                    src="../../assets/images/responsivedesign.svg"
-                  />
+                  <img className="img-responsive" src={responsiveDesign} />
                 </div>
               </div>
 
@@ -166,10 +165,7 @@ const Home = () => {
             <div className="ideas-summary">
               <div className="col-sm-1 col-md-1">
                 <div className="idea-img">
-                  <img
-                    className="img-responsive"
-                    src="../../assets/images/innovativesolutions.svg"
-                  />
+                  <img className="img-responsive" src={innovativeSolutions} />
                 </div>
               </div>
 
@@ -188,10 +184,7 @@ const Home = () => {
 
             <div className="passion-summary">
               <div className="col-sm-1 col-md-1 col-sm-offset-2 col-md-offset-2">
-                <img
-                  className="img-responsive"
-                  src="../../assets/images/passion.svg"
-                />
+                <img className="img-responsive" src={passionSvg} />
               </div>
 
               <div className="col-sm-4 col-md-4">
