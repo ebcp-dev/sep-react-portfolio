@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import Portfolio from '../Portfolio/Portfolio';
@@ -12,6 +12,14 @@ import innovativeSolutions from '../../assets/images/innovativesolutions.svg';
 import passionSvg from '../../assets/images/passion.svg';
 
 const Home = () => {
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+
+  const clickToScroll = (element: string) => {
+    if (element === 'about') aboutRef.current?.scrollIntoView();
+    if (element === 'projects') projectsRef.current?.scrollIntoView();
+  };
+
   return (
     <>
       {/* Main */}
@@ -30,13 +38,21 @@ const Home = () => {
           <div className="row text-center">
             <div className="banner-buttons">
               <div className="col-sm-1 col-md-1 col-sm-offset-5 col-md-offset-5">
-                <Link className="btn btn-default btn-border" to="#about">
+                <Link
+                  className="btn btn-default btn-border"
+                  to="#about"
+                  onClick={() => clickToScroll('about')}
+                >
                   Info
                 </Link>
               </div>
 
               <div className="col-sm-1 col-md-1">
-                <Link className="btn btn-default btn-border" to="#projects">
+                <Link
+                  className="btn btn-default btn-border"
+                  to="#projects"
+                  onClick={() => clickToScroll('projects')}
+                >
                   Portfolio
                 </Link>
               </div>
@@ -45,7 +61,7 @@ const Home = () => {
         </div>
       </div>
       {/* About */}
-      <div className="about" id="about">
+      <div className="about" id="about" ref={aboutRef}>
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
@@ -201,7 +217,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Portfolio />
+      <div id="projects" ref={projectsRef}>
+        <Portfolio />
+      </div>
       <Contact />
     </>
   );
