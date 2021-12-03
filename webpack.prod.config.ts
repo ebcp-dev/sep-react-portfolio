@@ -33,7 +33,15 @@ const config: Configuration = {
       },
       {
         test: /\.(s(a|c)ss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        type: 'asset/resource'
+      },
+      {
+        test: /\.(svg)$/i,
+        type: 'asset/inline'
       }
     ]
   },

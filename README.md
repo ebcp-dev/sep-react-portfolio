@@ -1,8 +1,6 @@
-# react-webpack template
+# SEP React Portfolio
 
-A Webpack 5 template for Typescript, React and Redux Toolkit.
-
-Contains a simple Todo List implemented with Redux Toolkit.
+Migrated a portfolio website with jQuery to a React application.
 
 ## Created with:
 
@@ -17,9 +15,3 @@ Jest and React Testing Library: https://www.carlrippon.com/using-jest-and-rtl-wi
 - react-router
 - SASS
 - eslint
-- Jest
-- React Testing Library
-
-## Todos:
-
-- Write tests.
